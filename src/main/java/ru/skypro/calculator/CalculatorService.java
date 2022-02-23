@@ -32,8 +32,11 @@ public class CalculatorService {
     }
 
     public String divide(String num1, String num2) {
-        if (checkParams(num1, num2) || num2.equals("0")) {
+        if (checkParams(num1, num2)) {
             return "Error arguments!";
+        }
+        if (num2.equals("0")) {
+            throw new IllegalArgumentException("It's forbidden to divide by zero!");
         }
         return String.format(num1 + " / " + num2 + " = " + "%d", parseInt(num1) / parseInt(num2));
     }
