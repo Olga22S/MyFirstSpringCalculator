@@ -7,9 +7,6 @@ import static java.lang.Integer.parseInt;
 @Service
 public class CalculatorService {
 
-    public CalculatorService() {
-    }
-
     public String plus(String num1, String num2) {
         if (checkParams(num1, num2)) {
             return "Error arguments!";

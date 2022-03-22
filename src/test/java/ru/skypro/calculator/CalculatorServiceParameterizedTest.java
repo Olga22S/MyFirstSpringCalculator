@@ -15,29 +15,28 @@ public class CalculatorServiceParameterizedTest {
 
     @ParameterizedTest
     @MethodSource("provideParamsForAddTests")
-    public void shouldReturnCorrectAddingResultAsString(String num1, String num2, String expectedResult) {
+    public void givenTwoNumsThenReturnAddingResultAsString(String num1, String num2, String expectedResult) {
         String result = out.plus(num1, num2);
         assertEquals(result, expectedResult);
     }
 
-
     @ParameterizedTest
     @MethodSource("provideParamsForMinusTests")
-    public void shouldReturnCorrectMinusResultAsString(String num1, String num2, String expectedResult) {
+    public void givenTwoNumsThenReturnMinusResultAsString(String num1, String num2, String expectedResult) {
         String result = out.minus(num1, num2);
         assertEquals(result, expectedResult);
     }
 
     @ParameterizedTest
     @MethodSource("provideParamsForMultiplyTests")
-    public void shouldReturnCorrectMultiplyingResultAsString(String num1, String num2, String expectedResult) {
+    public void givenTwoNumsThenReturnMultiplyingResultAsString(String num1, String num2, String expectedResult) {
         String result = out.multiply(num1, num2);
         assertEquals(result, expectedResult);
     }
 
     @ParameterizedTest
     @MethodSource("provideParamsForDivideTests")
-    public void shouldReturnCorrectDividingResultAsString(String num1, String num2, String expectedResult) {
+    public void givenTwoNumsThenReturnDividingResultAsString(String num1, String num2, String expectedResult) {
         String result = out.divide(num1, num2);
         assertEquals(result, expectedResult);
     }
