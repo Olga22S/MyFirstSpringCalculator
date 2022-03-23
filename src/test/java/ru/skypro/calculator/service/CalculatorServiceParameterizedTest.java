@@ -14,28 +14,28 @@ public class CalculatorServiceParameterizedTest {
 
     @ParameterizedTest
     @MethodSource("provideParamsForAddTests")
-    public void givenTwoNumsThenReturnAddingResult(int num1, int num2, int expectedResult) {
+    public void givenTwoNumsWhenSumArgsThenReturnExpectedResult(int num1, int num2, int expectedResult) {
         int result = out.plus(num1, num2);
         assertEquals(result, expectedResult);
     }
 
     @ParameterizedTest
     @MethodSource("provideParamsForMinusTests")
-    public void givenTwoNumsThenReturnMinusResult(int num1, int num2, int expectedResult) {
+    public void givenTwoNumsWhenMinusArgsThenReturnExpectedResult(int num1, int num2, int expectedResult) {
         int result = out.minus(num1, num2);
         assertEquals(result, expectedResult);
     }
 
     @ParameterizedTest
     @MethodSource("provideParamsForMultiplyTests")
-    public void givenTwoNumsThenReturnMultiplyingResult(int num1, int num2, int expectedResult) {
+    public void givenTwoNumsWhenMultiplyArgsThenReturnExpectedResult(int num1, int num2, int expectedResult) {
         int result = out.multiply(num1, num2);
         assertEquals(result, expectedResult);
     }
 
     @ParameterizedTest
     @MethodSource("provideParamsForDivideTests")
-    public void givenTwoNumsThenReturnDividingResult(int num1, int num2, int expectedResult) {
+    public void givenTwoNumsWhenDivideArgsThenReturnExpectedResult(int num1, int num2, int expectedResult) {
         int result = out.divide(num1, num2);
         assertEquals(result, expectedResult);
     }

@@ -4,20 +4,20 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import ru.skypro.calculator.service.FormatterCalculatorResult;
+import ru.skypro.calculator.service.CalculatorResultFormatter;
 
 @RestController
 @RequestMapping("/calculator")
 public class Controller {
 
-    private final FormatterCalculatorResult formatterCalculatorResult;
+    private final CalculatorResultFormatter formatterCalculatorResult;
 
-    public Controller(FormatterCalculatorResult formatterCalculatorResult) {
+    public Controller(CalculatorResultFormatter formatterCalculatorResult) {
         this.formatterCalculatorResult = formatterCalculatorResult;
     }
 
-    @GetMapping()
-    public String hello() {
+    @GetMapping
+    public String getGreeting() {
         return "Добро пожаловать в калькулятор!";
     }
 

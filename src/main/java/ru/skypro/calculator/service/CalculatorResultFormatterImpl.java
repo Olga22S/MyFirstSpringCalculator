@@ -1,13 +1,13 @@
 package ru.skypro.calculator.service;
 
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
-@Service
-public class FormatterCalculatorResultImpl implements FormatterCalculatorResult {
+@Component
+public class CalculatorResultFormatterImpl implements CalculatorResultFormatter {
 
     private final CalculatorService calculatorService;
 
-    public FormatterCalculatorResultImpl(CalculatorService calculatorService) {
+    public CalculatorResultFormatterImpl(CalculatorService calculatorService) {
         this.calculatorService = calculatorService;
     }
 

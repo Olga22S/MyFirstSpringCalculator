@@ -1,6 +1,6 @@
 package ru.skypro.calculator.service;
 
-public interface FormatterCalculatorResult {
+public interface CalculatorResultFormatter {
 
     String getFormattedMinusResult(int num1, int num2);
 
